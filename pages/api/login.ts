@@ -8,7 +8,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     if (email && password) {
         const response = await fetch(
-            `${process.env.NEXT_PUBLIC_API_BASE_URL}user/sesion/login/`,
+            `${(process.env.INTERNAL_API_BASE || process.env.NEXT_PUBLIC_API_BASE_URL)}user/sesion/login/`,
             {
                 method: 'POST',
                 body: JSON.stringify({ email, password }),

@@ -5,7 +5,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
-    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}user/sesion/user/`
+    const url = `${(process.env.INTERNAL_API_BASE || process.env.NEXT_PUBLIC_API_BASE_URL)}user/sesion/user/`
     const body = JSON.parse(req.body)
     const { email, firstName, lastName, phone, userinfo } = body
 

@@ -11,19 +11,12 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPWA({
     images: {
-        remotePatterns: [
-            {
-                protocol: 'http',
-                hostname: '170.210.60.215',
-                port: '3600',
-                pathname: '/media/**',
-            },
-            {
-                protocol: 'http',
-                hostname: '127.0.0.1', // opcional para entorno local
-                port: '8000',
-                pathname: '/media/**',
-            },
-        ],
-    },
+  domains: ['nutrirargentina.org','www.nutrirargentina.org'],
+  remotePatterns: [
+    { protocol: 'https', hostname: 'nutrirargentina.org',     pathname: '/media/**' },
+    { protocol: 'http',  hostname: 'nutrirargentina.org',     pathname: '/media/**' },
+    { protocol: 'https', hostname: 'www.nutrirargentina.org', pathname: '/media/**' },
+    { protocol: 'http',  hostname: 'www.nutrirargentina.org', pathname: '/media/**' },
+  ],
+},
 });

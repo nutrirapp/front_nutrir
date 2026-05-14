@@ -6,7 +6,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { token, comedor, funcionamientos } = body
   delete body.token
 
-  const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}comedor/funcionamiento/`
+  const url = `${(process.env.INTERNAL_API_BASE || process.env.NEXT_PUBLIC_API_BASE_URL)}comedor/funcionamiento/`
 
   try {
 

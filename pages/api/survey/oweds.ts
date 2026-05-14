@@ -20,7 +20,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   //     res.status(401).json(error)
   // }
   // axios.get(
-  //   `${process.env.NEXT_PUBLIC_API_BASE_URL}encuesta/incompletas/1/${currentDay('YYYY-MM-DD')}`,
+  //   `${(process.env.INTERNAL_API_BASE || process.env.NEXT_PUBLIC_API_BASE_URL)}encuesta/incompletas/1/${currentDay('YYYY-MM-DD')}`,
   //   { headers: { Authorization: `Bearer ${user.access_token}` } })
   //   .then(res => {
   //     if (res.status === 401) {

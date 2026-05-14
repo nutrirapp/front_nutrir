@@ -15,7 +15,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         entre_calles: between_street1
     }
 
-    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}comedor/${id}/`
+    const url = `${(process.env.INTERNAL_API_BASE || process.env.NEXT_PUBLIC_API_BASE_URL)}comedor/${id}/`
     
     try {
 
