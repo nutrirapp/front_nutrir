@@ -83,7 +83,7 @@ const nutritionalChartDataFormatter = (data: NutritionalDataType) => {
       borderWidth: 1
     },
     {
-      label: 'Sodio (mg)',
+      label: 'Sodio (g)',
       data: lista.map(el => el.sodio / 1000),
       backgroundColor: "#ffa30080",
       borderColor: "#ffa300",
